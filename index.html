@@ -1,1 +1,45 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FrameFlow Animator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top-bar">
+      <h1>FrameFlow Animator</h1>
+      <div class="toolbar">
+        <label>
+          Color:
+          <input type="color" id="colorPicker" value="#000000" />
+        </label>
+        <label>
+          Brush size:
+          <input type="range" id="brushSize" min="1" max="30" value="5" />
+        </label>
+        <button id="clearFrameBtn">Clear frame</button>
+      </div>
+    </header>
+
+    <main class="main-area">
+      <canvas id="canvas" width="800" height="450"></canvas>
+    </main>
+
+    <footer class="timeline">
+      <div class="frames" id="framesContainer"></div>
+      <div class="timeline-controls">
+        <button id="addFrameBtn">+ Add frame</button>
+        <button id="playBtn">Play</button>
+        <button id="stopBtn">Stop</button>
+        <label>
+          FPS:
+          <input type="number" id="fpsInput" value="8" min="1" max="60" />
+        </label>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
